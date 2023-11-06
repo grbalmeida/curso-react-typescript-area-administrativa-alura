@@ -8,13 +8,22 @@ function Tabela() {
                     <TableHead>
                         <TableRow>
                             <TableCell>Data</TableCell>
+                            <TableCell>Horário</TableCell>
+                            <TableCell>Profissional</TableCell>
+                            <TableCell>Especialidade</TableCell>
+                            <TableCell>Paciente</TableCell>
+                            <TableCell>Modalidade</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
                         <TableRow>
-                            <TableCell component="th" scope="row">22/03/2022</TableCell>
+                           <TableCell component="th" scope="row">22/02/2023</TableCell>
                             <TableCell>08:30</TableCell>
-                        </TableRow>
+                            <TableCell>Monica Hillman</TableCell>
+                            <TableCell>Clinica Geral</TableCell>
+                            <TableCell>Caroline Carvalho</TableCell>
+                            <TableCell>Particular</TableCell>
+                          </TableRow>
                     </TableBody>
                 </Table>
             </TableContainer>
