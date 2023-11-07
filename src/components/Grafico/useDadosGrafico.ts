@@ -19,7 +19,7 @@ const useDadosGrafico = ({ profissionais, consultas }: Props) => {
             nome: profissional.nome,
             consultas: consultas.filter(
                 consulta => consulta.profissional.some(
-                    prof => prof.id === profissional.id
+                    prof => prof.nome === profissional.nome
                 )
             ).length
         }));
