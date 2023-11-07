@@ -1,9 +1,21 @@
+import styled from 'styled-components';
 import { Rating } from '@mui/material';
 import IProfissional from '../../../types/IProfissional';
 
+const ContainerEstilizado = styled.div`
+    flex: 40%;
+    max-width: 100%;
+    background-color: #FFFFFF;
+    padding: 1em;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    color: var(--cinza);
+    margin: 1em 2em 1em;
+`;
+
 function Card({ profissional }: { profissional: IProfissional }) {
     return (
-        <div>
+        <ContainerEstilizado>
             <ul>
                 <li>
                     <img
@@ -23,7 +35,7 @@ function Card({ profissional }: { profissional: IProfissional }) {
                     />
                 </li>
             </ul>
-        </div>
+        </ContainerEstilizado>
     )
 }
 
