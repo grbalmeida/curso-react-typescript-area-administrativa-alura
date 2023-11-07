@@ -1,9 +1,17 @@
-import { BarChart, ResponsiveContainer } from 'recharts';
-import { XAxis } from 'recharts/types/cartesian/XAxis';
-import { YAxis } from 'recharts/types/cartesian/YAxis';
-import { Bar } from 'recharts/types/cartesian/Bar';
+import { ResponsiveContainer } from 'recharts';
+import { Bar } from 'recharts';
+import { XAxis } from 'recharts';
+import { YAxis } from 'recharts';
+import { BarChart } from 'recharts';
+import IProfissional from '../../types/IProfissional';
+import IConsulta from '../../types/IConsulta';
 
-function Grafico({ dados }: { dados: any }) {
+interface Props {
+    profissionais: IProfissional[];
+    consultas: IConsulta[];
+}
+
+function Grafico({ profissionais, consultas }: Props) {
     return (
         <ResponsiveContainer width="100%" height={350}>
             <BarChart
