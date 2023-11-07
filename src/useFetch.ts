@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
 
+const apiUrl = process.env.NODE_ENV === 'production'
+    ? 'https://my-json-server.typicode.com/grbalmeida/voll-api/'
+    : 'http://localhost:8080/';
+
 export default function useFetch<T>({ url }: { url: string }) {
     const [dados, setDados] = useState<T | null>(null);
     const [erro, setErro] = useState('');
-
-    let apiUrl = process.env.API_URL ? process.env.API_URL : 'http://localhost:8080/';
 
     useEffect(() => {
         fetch(`${apiUrl}${url}`)
